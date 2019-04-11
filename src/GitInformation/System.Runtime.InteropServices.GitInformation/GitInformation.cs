@@ -55,7 +55,7 @@ namespace System.Runtime.InteropServices
         /// A value indicating whether the branch is dirty or
         /// clean based upon the string constructed by git describe.
         /// </value>
-        public bool IsDirty => this.Headdesc.EndsWith("-dirty");
+        public bool IsDirty => this.Headdesc.EndsWith("-dirty", StringComparison.Ordinal);
 
         /// <summary>
         /// Gets a value indicating whether the branch is the master
