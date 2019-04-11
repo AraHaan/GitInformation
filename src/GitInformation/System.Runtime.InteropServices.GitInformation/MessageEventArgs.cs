@@ -17,10 +17,12 @@ namespace System.Messaging
         /// </summary>
         /// <param name="text">The text for the message.</param>
         /// <param name="caption">The title (caption) for the message.</param>
-        public MessageEventArgs(string text, string caption)
+        /// <param name="errorlevel">The error level for the message, or None for no error level information.</param>
+        public MessageEventArgs(string text, string caption, ErrorLevel errorlevel)
         {
             this.Text = text;
             this.Caption = caption;
+            this.ErrorLevel = errorlevel;
         }
 
         /// <summary>
@@ -32,5 +34,10 @@ namespace System.Messaging
         /// Gets or sets the caption (title) for the message.
         /// </summary>
         public string Caption { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the <see cref="ErrorLevel" of the message.
+        /// </summary>
+        public ErrorLevel ErrorLevel { get; set; }
     }
 }
