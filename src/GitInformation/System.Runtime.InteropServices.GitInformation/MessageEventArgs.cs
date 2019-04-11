@@ -36,7 +36,7 @@ namespace System.Messaging
         public string Caption { get; set; }
         
         /// <summary>
-        /// Gets or sets the <see cref="ErrorLevel" of the message.
+        /// Gets or sets the <see cref="ErrorLevel"/> of the message.
         /// </summary>
         public ErrorLevel ErrorLevel { get; set; }
     }
