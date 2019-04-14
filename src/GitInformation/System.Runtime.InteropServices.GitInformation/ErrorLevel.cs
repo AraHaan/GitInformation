@@ -14,7 +14,7 @@ namespace System.Messaging
         /// Represents that the current error level is nothing.
         /// </summary>
         None = 0,
-        
+
         /// <summary>
         /// Represents that the current error level is information.
         /// </summary>

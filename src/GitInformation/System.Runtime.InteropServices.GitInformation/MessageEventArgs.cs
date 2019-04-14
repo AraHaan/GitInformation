@@ -34,7 +34,7 @@ namespace System.Messaging
         /// Gets or sets the caption (title) for the message.
         /// </summary>
         public string Caption { get; set; }
-        
+
         /// <summary>
         /// Gets or sets the <see cref="ErrorLevel"/> of the message.
         /// </summary>
