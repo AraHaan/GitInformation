@@ -2,14 +2,14 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;netcoreapp3.0;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48</TargetFrameworks>
-		<AssemblyName>System.Runtime.InteropServices.GitInformation</AssemblyName>
+		<AssemblyName>GitInformation</AssemblyName>
 		<LangVersion>latest</LangVersion>
 		<Company>AraHaan</Company>
 		<Authors>AraHaan</Authors>
 		<PackageTags>GitBuildInformation</PackageTags>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/AraHaan/System.Runtime.InteropServices.GitInformation/</RepositoryUrl>
-		<PackageProjectUrl>https://github.com/AraHaan/System.Runtime.InteropServices.GitInformation/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/AraHaan/GitInformation/</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/AraHaan/GitInformation/</PackageProjectUrl>
 		<PackageOutputPath Condition="'$(SolutionName)' == 'build_all_packages'">$(MSBuildThisFileDirectory)..\..\..\artifacts\</PackageOutputPath>
 		<PackageOutputPath Condition="'$(SolutionName)' != 'build_all_packages'">$(MSBuildThisFileDirectory)..\..\artifacts\</PackageOutputPath>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -67,7 +67,7 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsAsErrors />
 		<OutputPath>bin\Any CPU\Debug\</OutputPath>
-		<DocumentationFile>bin\Any CPU\Debug\System.Runtime.InteropServices.GitInformation.xml</DocumentationFile>
+		<DocumentationFile>bin\Any CPU\Debug\GitInformation.xml</DocumentationFile>
 		<DebugType>full</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
@@ -76,7 +76,7 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsAsErrors />
 		<OutputPath>bin\Any CPU\Release\</OutputPath>
-		<DocumentationFile>bin\Any CPU\Release\System.Runtime.InteropServices.GitInformation.xml</DocumentationFile>
+		<DocumentationFile>bin\Any CPU\Release\GitInformation.xml</DocumentationFile>
 		<DebugType>full</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
