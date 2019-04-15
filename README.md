@@ -1,4 +1,4 @@
-# System.Runtime.InteropServices.GitInformation
+# GitInformation
 
 [![Build status](https://ci.appveyor.com/api/projects/status/p7ybhri0j8h71kb1?svg=true)](https://ci.appveyor.com/project/AraHaan/system-runtime-interopservices-gitinformation)
 [![Build Status](https://dev.azure.com/AraHaan/XmlAbstraction/_apis/build/status/AraHaan.System.Runtime.InteropServices.GitInformation?branchName=master)](https://dev.azure.com/AraHaan/XmlAbstraction/_build/latest?definitionId=3&branchName=master)
