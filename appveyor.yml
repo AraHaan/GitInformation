@@ -69,7 +69,7 @@ before_build:
 
     nuget restore
 build:
-  project: System.Runtime.InteropServices.GitInformation.sln
+  project: GitInformation.sln
   publish_nuget: true
   publish_nuget_symbols: true
   include_nuget_references: true
