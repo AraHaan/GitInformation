@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;netcoreapp2.0;netcoreapp2.1;netcoreapp2.2;netcoreapp3.0;net40;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48</TargetFrameworks>
-		<AssemblyName>GitInformation</AssemblyName>
+		<AssemblyName>AraHaan.GitInformation</AssemblyName>
 		<LangVersion>latest</LangVersion>
 		<Company>AraHaan</Company>
 		<Authors>AraHaan</Authors>
