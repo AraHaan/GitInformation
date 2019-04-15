@@ -31,6 +31,36 @@ jobs:
       Write-Host "Installed" -ForegroundColor Green
     displayName: 'Download and install .NET Core 3 Preview 3.'
   - powershell: |
+      Write-Host "Installing .NET Framework 4.7 Targeting Pack..." -ForegroundColor Cyan
+      Write-Host "Downloading..."
+      $exePath = "$env:TEMP\ndp47-devpack-enu.exe"
+      (New-Object Net.WebClient).DownloadFile('https://go.microsoft.com/fwlink/?linkid=825318', $exePath)
+      Write-Host "Installing..."
+      cmd /c start /wait "$exePath" /quiet /norestart
+      del $exePath
+      Write-Host "Installed" -ForegroundColor Green
+    displayName: 'Download and install .NET Framework 4.7.'
+  - powershell: |
+      Write-Host "Installing .NET Framework 4.7.1 Targeting Pack..." -ForegroundColor Cyan
+      Write-Host "Downloading..."
+      $exePath = "$env:TEMP\ndp471-devpack-enu.exe"
+      (New-Object Net.WebClient).DownloadFile('https://go.microsoft.com/fwlink/?linkid=852102', $exePath)
+      Write-Host "Installing..."
+      cmd /c start /wait "$exePath" /quiet /norestart
+      del $exePath
+      Write-Host "Installed" -ForegroundColor Green
+    displayName: 'Download and install .NET Framework 4.7.1.'
+  - powershell: |
+      Write-Host "Installing .NET Framework 4.7.2 Targeting Pack..." -ForegroundColor Cyan
+      Write-Host "Downloading..."
+      $exePath = "$env:TEMP\ndp472-devpack-enu.exe"
+      (New-Object Net.WebClient).DownloadFile('https://go.microsoft.com/fwlink/?linkid=874338', $exePath)
+      Write-Host "Installing..."
+      cmd /c start /wait "$exePath" /quiet /norestart
+      del $exePath
+      Write-Host "Installed" -ForegroundColor Green
+    displayName: 'Download and install .NET Framework 4.7.2.'
+  - powershell: |
       Write-Host "Installing .NET Framework 4.8 Targeting Pack..." -ForegroundColor Cyan
       Write-Host "Downloading..."
       $exePath = "$env:TEMP\ndp48-devpack-enu.exe"
