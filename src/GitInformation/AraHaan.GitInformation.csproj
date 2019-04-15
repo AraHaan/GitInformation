@@ -67,7 +67,7 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsAsErrors />
 		<OutputPath>bin\Any CPU\Debug\</OutputPath>
-		<DocumentationFile>bin\Any CPU\Debug\GitInformation.xml</DocumentationFile>
+		<DocumentationFile>bin\Any CPU\Debug\AraHaan.GitInformation.xml</DocumentationFile>
 		<DebugType>full</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
@@ -76,7 +76,7 @@
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 		<WarningsAsErrors />
 		<OutputPath>bin\Any CPU\Release\</OutputPath>
-		<DocumentationFile>bin\Any CPU\Release\GitInformation.xml</DocumentationFile>
+		<DocumentationFile>bin\Any CPU\Release\AraHaan.GitInformation.xml</DocumentationFile>
 		<DebugType>full</DebugType>
 		<DebugSymbols>true</DebugSymbols>
 	</PropertyGroup>
