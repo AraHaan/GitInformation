@@ -15,7 +15,10 @@ namespace System.Runtime.InteropServices
     {
         // This is the collection of instances this has.
         private static readonly Dictionary<Assembly, GitInformation> AssemblyInstances = new Dictionary<Assembly, GitInformation>();
+        private static readonly List<Assembly> AppliedAssemblies = new List<Assembly>();
+        /*
         private static bool applied = false;
+        */
 
         internal GitInformation(string headdesc, string commit, string branchname, Assembly assembly)
         {
@@ -78,6 +81,15 @@ namespace System.Runtime.InteropServices
         public static void ApplyAssemblyAttributes(Assembly assembly)
         {
             // this check is to avoid a stack overflow exception.
+            if (!AppliedAssemblies.Contains(assembly))
+            {
+                AppliedAssemblies.Add(assembly);
+                assembly.GetCustomAttributes(false);
+            }
+
+            // this has been replaced with a list of applied assemblies
+            // to avoid a stack overflow on them as well.
+            /*
             if (assembly == typeof(GitInformation).Assembly)
             {
                 if (!applied)
@@ -90,11 +102,12 @@ namespace System.Runtime.InteropServices
             {
                 assembly.GetCustomAttributes(false);
             }
+            */
         }
 
         /// <summary>
         /// Gets the instance of the <see cref="GitInformation"/> class for
-        /// the specified <see cref="Type"/>.
+        /// the specified <see cref="Type"/> or <see langword="null"/>.
         /// </summary>
         /// <param name="assemblyType">
         /// The <see cref="Type"/> to the <see cref="Assembly"/> to look for a instance of the <see cref="GitInformation"/> class.
@@ -108,7 +121,7 @@ namespace System.Runtime.InteropServices
 
         /// <summary>
         /// Gets the instance of the <see cref="GitInformation"/> class for
-        /// the specified <see cref="Assembly"/>.
+        /// the specified <see cref="Assembly"/> or <see langword="null"/>.
         /// </summary>
         /// <param name="assembly">
         /// The <see cref="Assembly"/> to look for a instance of the <see cref="GitInformation"/> class.

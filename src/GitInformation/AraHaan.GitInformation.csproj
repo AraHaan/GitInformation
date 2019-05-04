@@ -16,7 +16,7 @@
 		<Copyright>Copyright (c) 2019</Copyright>
 		<Description>A c# library that Registers git repository information on the assembly.</Description>
 		<PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<ProduceReferenceAssembly>true</ProduceReferenceAssembly>
 		<NoWarn>$(NoWarn);NU5104;NU5118</NoWarn>
@@ -82,9 +82,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="GitBuildInfo" Version="0.16.0">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+		<PackageReference Include="GitBuildInfo" Version="0.18.0">
 			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
 			<PrivateAssets>all</PrivateAssets>
