@@ -80,6 +80,11 @@ namespace System.Runtime.InteropServices
         /// </param>
         public static void ApplyAssemblyAttributes(Assembly assembly)
         {
+            if (assembly == null)
+            {
+                throw new ArgumentNullException(nameof(assembly));
+            }
+
             // this check is to avoid a stack overflow exception.
             if (!AppliedAssemblies.Contains(assembly))
             {
@@ -117,7 +122,14 @@ namespace System.Runtime.InteropServices
         /// or <see langword="null"/>.
         /// </returns>
         public static GitInformation GetAssemblyInstance(Type assemblyType)
-            => GetAssemblyInstance(assemblyType.Assembly);
+        {
+            if (assemblyType == null)
+            {
+                throw new ArgumentNullException(nameof(assemblyType));
+            }
+
+            return GetAssemblyInstance(assemblyType.Assembly);
+        }
 
         /// <summary>
         /// Gets the instance of the <see cref="GitInformation"/> class for
