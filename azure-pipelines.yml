@@ -70,9 +70,6 @@ jobs:
       del $exePath
       Write-Host "Installed" -ForegroundColor Green
     displayName: 'Download and install .NET Framework 4.8.'
-  - powershell: |
-      nuget sources Add -Name "Generic Roslyn Analyzers" -Source https://dotnet.myget.org/F/roslyn-analyzers/api/v3/index.json
-    displayName: 'Before Build'
   - task: NuGetCommand@2
     inputs:
       command: 'restore'
