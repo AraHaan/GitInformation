@@ -70,7 +70,7 @@ namespace System.Runtime.InteropServices
         /// branch or not based upon the string constructed by
         /// git name-rev.
         /// </value>
-        public bool IsMaster => this.Branchname.Equals("master");
+        public bool IsMaster => this.Branchname.Equals("master", StringComparison.Ordinal);
 
         /// <summary>
         /// Applies the <see cref="Attribute"/>s that the specified <see cref="Assembly"/> contains.
