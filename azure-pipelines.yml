@@ -22,10 +22,11 @@ jobs:
       del $exePath
       Write-Host "Installed" -ForegroundColor Green
     displayName: 'Download and install .NET Core 5 Preview 4.'
-  - task: NuGetCommand@2
+  - task: DotNetCoreCLI@2
     inputs:
       command: 'restore'
-      solution: 'GitInformation.sln'
+      projects: 'GitInformation.sln'
+      arguments: '--configuration Release'
   - task: DotNetCoreCLI@2
     inputs:
       command: 'build'
