@@ -13,10 +13,10 @@
     <PackageOutputPath Condition="'$(SolutionName)' == 'build_all_packages'">$(MSBuildThisFileDirectory)..\..\..\artifacts\</PackageOutputPath>
     <PackageOutputPath Condition="'$(SolutionName)' != 'build_all_packages'">$(MSBuildThisFileDirectory)..\..\artifacts\</PackageOutputPath>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>Copyright (c) 2019</Copyright>
+    <Copyright>Copyright (c) 2019-2020</Copyright>
     <Description>A c# library that Registers git repository information on the assembly.</Description>
-    <PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <PackageReleaseNotes>Minor performance increase, and fixed bug that can cause a bad exception.</PackageReleaseNotes>
+    <Version>1.0.2</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <NoWarn>$(NoWarn);NU5104;NU5118</NoWarn>
