@@ -25,7 +25,11 @@ namespace System.Runtime.InteropServices
             this.Headdesc = headdesc;
             this.Commit = commit;
             this.Branchname = branchname;
-            AssemblyInstances.Add(assembly, this);
+
+            if (!AssemblyInstances.ContainsKey(assembly))
+            {
+                AssemblyInstances.Add(assembly, this);
+            }
         }
 
         /// <summary>
