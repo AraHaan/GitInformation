@@ -143,6 +143,6 @@ namespace System.Runtime.InteropServices
         /// or <see langword="null"/>.
         /// </returns>
         public static GitInformation GetAssemblyInstance(Assembly assembly)
-            => AssemblyInstances.ContainsKey(assembly) ? AssemblyInstances[assembly] : null;
+            => AssemblyInstances.TryGetValue(assembly, out var gitInformation) ? gitInformation : null;
     }
 }
