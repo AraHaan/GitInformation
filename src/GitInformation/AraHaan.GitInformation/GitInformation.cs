@@ -16,9 +16,6 @@ namespace System.Runtime.InteropServices
         // This is the collection of instances this has.
         private static readonly Dictionary<Assembly, GitInformation> AssemblyInstances = new Dictionary<Assembly, GitInformation>();
         private static readonly HashSet<Assembly> AppliedAssemblies = new HashSet<Assembly>();
-        /*
-        private static bool applied = false;
-        */
 
         internal GitInformation(string headdesc, string commit, string branchname, Assembly assembly)
         {
@@ -90,28 +87,11 @@ namespace System.Runtime.InteropServices
             }
 
             // this check is to avoid a stack overflow exception.
-            if (!AppliedAssemblies.Contains(assembly))
+            var added = AppliedAssemblies.Add(assembly);
+            if (added)
             {
-                AppliedAssemblies.Add(assembly);
-                assembly.GetCustomAttributes(false);
+                _ = assembly.GetCustomAttributes(false);
             }
-
-            // this has been replaced with a list of applied assemblies
-            // to avoid a stack overflow on them as well.
-            /*
-            if (assembly == typeof(GitInformation).Assembly)
-            {
-                if (!applied)
-                {
-                    applied = true;
-                    assembly.GetCustomAttributes(false);
-                }
-            }
-            else
-            {
-                assembly.GetCustomAttributes(false);
-            }
-            */
         }
 
         /// <summary>
