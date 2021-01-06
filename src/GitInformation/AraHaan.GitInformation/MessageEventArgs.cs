@@ -5,8 +5,6 @@
 
 namespace System.Messaging
 {
-    using System;
-
     /// <summary>
     /// Event that holds the message text and the caption.
     /// </summary>

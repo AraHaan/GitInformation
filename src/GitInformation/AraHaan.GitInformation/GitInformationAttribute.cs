@@ -5,8 +5,6 @@
 
 namespace System.Runtime.InteropServices
 {
-    using System;
-
     // This attribute can only be used on an assemly.
 
     /// <summary>
